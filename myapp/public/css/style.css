@@ -1,0 +1,271 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+   
+  }
+
+.entete{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+ 
+ }
+ .entete div {
+     text-align: center;
+     margin: 14px 50px 10px  0px;   
+     font-family: 'georgia';
+     
+ }
+ 
+ .entete h1{
+  color :#f19520;
+  font-family: 'georgia';
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 7px;
+  margin-bottom: 8px;
+ } 
+ 
+ .entete img{
+  padding:5px;
+ 
+ };
+ 
+ .genie{
+     margin-right: 20px;
+ }
+
+  
+  /* *,
+  *::after,
+  *::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+  } */
+ 
+  .branding-logo {
+	color: #fff;
+	font-size: calc(0.8rem + 1vw);
+	text-decoration: none;
+	letter-spacing: 7px;
+  }
+  .navbar {
+	display: flex;
+	justify-content: flex-start ;
+	align-items: center;
+	background:   #02658c;
+	padding-left: 1.5em;
+	top: 0;
+  }
+
+
+  .menu {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+
+  }
+
+  .menu li {
+	list-style: none;
+  }
+
+  .menu li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0.8em 1.2em;
+	font-size: 15px;
+    font-weight: 500;
+	margin:  0;
+  }
+  .navbar .container{
+	    margin-right: 280px;
+  }
+  
+  /* Styling submenu */
+  .has-dropdown {
+	position: relative;
+  }
+  
+  .submenu {
+	position: absolute;
+	left: 0;
+	background-color: #02658c;
+	white-space: nowrap;
+	padding: 1.5em 0;
+	min-width: 16em;
+  
+	/* hide submenus */
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top center;
+  }
+  .submenu > li > a {
+	padding: 0.8em 1.5em;
+  }
+  
+  .menu > li:hover > a,
+  .submenu > li:hover > a {
+	color: #7ebcb9;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #7ebcb9;
+  }
+  .menu > li:hover > a {
+	color: #7ebcb9;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #7ebcb9;
+  }
+  
+  /* Arrows */
+  
+  .arrow {
+	width: 0.5em;
+	height: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+	border-left: 0.15em solid currentColor;
+	border-bottom: 0.15em solid currentColor;
+	transform: rotate(-45deg);
+	margin-top: -0.25em;
+	transition: transform 100ms ease-in-out;
+  }
+  
+  .menu > li:hover > a + .submenu,
+  .submenu > li:hover > a + .submenu {
+	opacity: 1;
+	transform: scaleY(1);
+  }
+  
+  
+  .menu > li:hover > a > .arrow,
+  .submenu > li:hover > a > .arrow {
+	transform: rotate(225deg);
+  }
+  
+  @media only screen and (max-width: 78.75em) {
+	.submenu .submenu .submenu {
+	  left: -100%;
+	  top: 0.5em;
+	}
+	.submenu {
+	  min-width: 16em;
+	}
+  }
+  @media only screen and (max-width: 58.75em) {
+	.menu li a {
+	  font-size: 1rem;
+	}
+  }
+  
+  @media only screen and (max-width: 50em) {
+	.navbar{
+ 
+	  padding: 1.5em 2em;
+	}
+	.menu {
+	  flex-flow: column;
+	  position: absolute;
+	  background: #fff;
+	  top: 4.55em;
+	  left: 0;
+	  right: 0;
+	  height: 100vh;
+	  opacity: 0;
+	  transform: scaleY(0);
+	  transform-origin: top center;
+	  transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
+		100ms opacity ease-in-out;
+	  overflow-y: scroll;
+	  
+	}
+	.menu > li > a {
+	  font-size: 1rem;
+	  color: var(--dark);
+	}
+	.submenu > li > a {
+	  font-size: 1rem;
+	}
+  
+	.submenu {
+	  top: 0;
+	  padding-left: 1.5em;
+
+	}
+	
+  
+	.menu > li:hover > a + .submenu{
+	  position: relative;
+	}
+  
+	.laren {
+	  width: 2em;
+	  height: 0.25em;
+	  display: block;
+	  background: #fff;
+	  position: relative;
+	  cursor: pointer;
+	  transition: 0.2s transform ease-in-out;
+	}
+	.laren::after,
+	.laren::before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  background: inherit;
+	  width: inherit;
+	  height: inherit;
+  
+	  transition: 0.2s transform ease-in-out;
+	}
+  
+	.laren::after {
+	  top: 0.65em;
+	}
+	.laren::before {
+	  bottom: 0.65em;
+	}
+  
+
+	input[type="checkbox"]:checked + .menu {
+	  position: absolute;
+	  opacity: 1;
+	  transform: scaleY(1);
+	}
+  }
+  
+    
+  
+  main {
+  
+	height: 200vh;
+  }
+
+
+  li a.signup {
+
+    background-color:#02658c;
+    padding: 8px 20px;
+	border: 2px solid  #f19520;
+    border-radius: 10px ;
+    transition: all 0.3s linear 0s;
+    margin-right: 13px;
+	margin-left: 10px;
+	margin-top: 8px;
+	color: #f19520;
+  }
+  
+  li a.signup:hover {
+    background-color: #047e85;
+    color: white;
+   
+
+	
+  }
